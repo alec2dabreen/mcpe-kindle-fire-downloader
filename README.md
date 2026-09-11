@@ -52,7 +52,7 @@ extension storage.
 Copy the log and include it in a new report on the
 [GitHub Issues page](https://github.com/alec2dabreen/mcpe-kindle-fire-downloader/issues).
 
-The proven Minecraft route remains unchanged:
+The proven Minecraft authentication route:
 
 `main auth/register mac_dms -> direct MAS appstoreOnlyRegisterDevice using the KFRAWI / A1TD5Z1R8IWBHA identity -> baseline getDownloadUrl`
 
