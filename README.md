@@ -1,8 +1,8 @@
-# APK Downloader for Minecraft: Kindle Fire Edition
+# APK Downloader Browser Extension for Minecraft: Kindle Fire Edition
 
 Version 1.0
 
-This extension downloads the Kindle Fire edition of Minecraft from the Amazon
+This browser extension downloads the Kindle Fire edition of Minecraft from the Amazon
 Appstore account that owns it.
 
 ## Ownership requirement
