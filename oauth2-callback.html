@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Logging in - APK Downloader for Amazon Appstore</title>
+  <link rel="stylesheet" href="css/pure-min.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+<div class="content page-callback">
+  <div class="valid">
+    <div class="header">
+      <h1>Processing...</h1>
+    </div>
+
+    <ul class="steps">
+      <li>Registering Device</li>
+      <li>Registering Associated Device</li>
+      <li>Registering Device on Appstore</li>
+      <li>Completed. Redirecting to Options page...</li>
+    </ul>
+  </div>
+  <div class="invalid">
+    <div class="header">
+      <h1>Invalid Session</h1>
+      <h2>
+        <a href="options.html">Return to Options page</a>
+      </h2>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="js/libs/sha256.js"></script>
+<script type="text/javascript" src="js/browser-support.js"></script>
+<script type="text/javascript" src="js/devices.js"></script>
+<script type="text/javascript" src="js/appstore-utils.js"></script>
+<script type="text/javascript" src="js/debug-log.js"></script>
+<script type="text/javascript" src="js/appstore-webservice.js"></script>
+<script type="text/javascript" src="js/appstore-api.js"></script>
+<script type="text/javascript" src="js/pages/page-oauth2-callback.js"></script>
+
+</body>
+</html>

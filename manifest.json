@@ -1,0 +1,99 @@
+{
+  "name": "APK Downloader for Minecraft: Kindle Fire Edition",
+  "description": "Downloads Minecraft for Kindle Fire from an Amazon account that owns the app.",
+  "version": "1.0",
+  "author": "Alec Breen",
+  "manifest_version": 3,
+  "icons": {
+    "16": "img/icon-16.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+  "background": {
+    "service_worker": "js/background-service-worker.js"
+  },
+  "options_page": "options.html",
+  "action": {
+    "default_title": "Open APK Downloader Options",
+    "default_icon": {
+      "16": "img/icon-16.png",
+      "48": "img/icon-48.png",
+      "128": "img/icon-128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.amazon.com/*",
+        "*://*.amazon.com.au/*",
+        "*://*.amazon.com.br/*",
+        "*://*.amazon.com.ca/*",
+        "*://*.amazon.com.cn/*",
+        "*://*.amazon.com.fr/*",
+        "*://*.amazon.com.de/*",
+        "*://*.amazon.com.in/*",
+        "*://*.amazon.com.it/*",
+        "*://*.amazon.com.nl/*",
+        "*://*.amazon.com.es/*",
+        "*://*.amazon.com.co.jp/*",
+        "*://*.amazon.com.com.mx/*",
+        "*://*.amazon.co.uk/*"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "js/browser-support.js",
+        "js/cs/content-scripts.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.amazon.com/gp/yourstore/home*",
+        "*://*.amazon.com.au/gp/yourstore/home*",
+        "*://*.amazon.com.br/gp/yourstore/home*",
+        "*://*.amazon.com.ca/gp/yourstore/home*",
+        "*://*.amazon.com.cn/gp/yourstore/home*",
+        "*://*.amazon.com.fr/gp/yourstore/home*",
+        "*://*.amazon.com.de/gp/yourstore/home*",
+        "*://*.amazon.com.in/gp/yourstore/home*",
+        "*://*.amazon.com.it/gp/yourstore/home*",
+        "*://*.amazon.com.nl/gp/yourstore/home*",
+        "*://*.amazon.com.es/gp/yourstore/home*",
+        "*://*.amazon.com.co.jp/gp/yourstore/home*",
+        "*://*.amazon.com.com.mx/gp/yourstore/home*",
+        "*://*.amazon.co.uk/gp/yourstore/home*"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "js/browser-support.js",
+        "js/cs/oauth2.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "downloads",
+    "declarativeNetRequestWithHostAccess",
+    "offscreen",
+    "cookies"
+  ],
+  "host_permissions": [
+    "https://api.amazon.com/*",
+    "https://mas-ext.amazon.com/*",
+    "https://www.amazon.com/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "img/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlibW1j5aGjEWapbcvtgdY/+K12yjmeg07dgIcU1PQCJA3aVIUxEvTb+IBzgwLRy3KKo4NWPSHOX6n8db50BPOHiEDKhrTtXiqh5V/uui1+m0zPnX/yY2uwxbTEwyh329IdhkRWL+WF1aWg6Ga3C7HC6y11W77S4HJJsWNn2ocCCl4l1I3cJxotYVKyqCzy7UGmNNvUGzcgNSTwB6WjsZ1fv8GK0fymfyT1zocrytEGFu41wtTmu/oeIcNuGwEsZef8f6oWL8ikFl9EXY4hb1jfZ2H27ZNrfSZye7VoXawGV1153MRs1KdWuSLKEKVhYDZsDr261ToUgvzOVVqDB0jwIDAQAB",
+  "version_name": "v1.0"
+}

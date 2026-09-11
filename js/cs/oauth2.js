@@ -1,0 +1,1 @@
+"use strict";!function(){var a=window.location;if("/gp/yourstore/home"===a.pathname&&""!==a.search){var b=window.location.search.substring(1);b.indexOf("openid.oa2.access_token=")>-1&&BrowserMessage.sendMessage({cmd:"oauth2Callback",data:{query:b}})}}();

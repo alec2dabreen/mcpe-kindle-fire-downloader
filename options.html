@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>APK Downloader for Minecraft: Kindle Fire Edition</title>
+  <link rel="stylesheet" href="css/pure-min.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<div class="content page-options">
+  <div class="header">
+    <h1>APK Downloader for Minecraft: Kindle Fire Edition</h1>
+    <p>v1.0</p>
+  </div>
+  <section class="section-login" style="display:none;text-align:center">
+    <p>Log in with the Amazon account that owns Minecraft.</p>
+    <button id="btn-oa2" class="pure-button pure-button-primary">Login using Amazon</button>
+  </section>
+  <section class="section-info" style="display:none">
+    <form class="pure-form pure-form-aligned"><fieldset>
+      <div class="pure-control-group"><label>Amazon Account</label><span class="value" id="txt-customer-name"></span></div>
+      <div class="pure-control-group"><label>Registered Device</label><span class="value" id="txt-device-name"></span></div>
+      <div class="pure-controls">
+        <button id="btn-download-minecraft" class="pure-button pure-button-primary" type="button">Download APK</button>
+        <button id="btn-logout" class="pure-button" type="button">Logout</button>
+      </div>
+      <div class="pure-controls"><span id="download-status" aria-live="polite"></span></div>
+    </fieldset></form>
+    <div class="download-note">
+      <p>The downloaded APK will be an ARM32 APK. If your device does not support ARM32, you will need to run it in an emulator such as <a href="https://www.bluestacks.com/" target="_blank" rel="noopener noreferrer">BlueStacks (www.bluestacks.com)</a>.</p>
+      <p>Before downloading, the extension reads the live Minecraft app page on Amazon and attempts to determine the latest available version. If that check or the download fails, the details will appear in the Current Download Debug Log below.</p>
+      <p>The emulator will also need the Amazon Appstore installed. It can be found on sites such as <a href="https://www.apkmirror.com/" target="_blank" rel="noopener noreferrer">APKMirror (www.apkmirror.com)</a>. If the version you download will not sideload correctly, try going backwards one version at a time until you find a working version. Only download APKs from sources you trust.</p>
+      <p>If you receive an error, copy the debug log below and include it in a new report on the <a href="https://github.com/alec2dabreen/mcpe-kindle-fire-downloader/issues" target="_blank" rel="noopener noreferrer">GitHub Issues page</a>.</p>
+    </div>
+  </section>
+  <section id="current-download-debug" style="display:none;margin-top:120px">
+    <h2>Current Download Debug Log</h2>
+    <p>This log is reset for every Download APK attempt and is not saved by this page.</p>
+    <textarea id="current-download-debug-log" readonly aria-label="Current download debug log"></textarea>
+    <div class="buttons"><button id="btn-copy-current-debug" class="pure-button" type="button">Copy Debug Log</button></div>
+  </section>
+  <footer class="project-credit">
+    <p>Written by Alec Breen | TheBreenis</p>
+    <p>Released under the <a href="LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>. Feel free to fork. Fork away, as they say.</p>
+    <p>Source code: <a href="https://github.com/alec2dabreen/mcpe-kindle-fire-downloader" target="_blank" rel="noopener noreferrer">github.com/alec2dabreen/mcpe-kindle-fire-downloader</a></p>
+  </footer>
+</div>
+<script src="js/browser-support.js"></script>
+<script src="js/libs/uuid.js"></script>
+<script src="js/appstore-utils.js"></script>
+<script src="js/appstore-api.js"></script>
+<script src="js/pages/page-options.js"></script>
+</body>
+</html>
