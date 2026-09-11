@@ -8,10 +8,11 @@ or sponsored by Amazon, Mojang, Microsoft, or Google.
 
 ## Single purpose
 
-The extension allows a user who already owns Minecraft: Kindle Fire Edition
-through Amazon to authenticate with Amazon, identify the current version offered
-on the Amazon Minecraft product page, and request the authorized APK from
-Amazon's Appstore servers.
+The extension allows a user who already owns an app through Amazon to
+authenticate with Amazon, identify the current version offered on its Amazon
+Appstore product page, and request the authorized APK from Amazon's Appstore
+servers. It includes a dedicated one-click Options-page workflow for Minecraft:
+Kindle Fire Edition.
 
 ## Information handled by the extension
 
@@ -22,8 +23,8 @@ To provide that function, the extension handles:
   the user signs in;
 - a randomly generated device serial, Amazon's registered-device name, and the
   fixed Minecraft-compatible Kindle Fire profile used for Appstore delivery;
-- the contents of Amazon's Minecraft product page, solely to locate its current
-  numeric application version; and
+- the ASIN and current numeric application version exposed by an Amazon Appstore
+  product page when the user clicks Download APK; and
 - technical status and sanitized error information for the current download
   attempt.
 
@@ -35,12 +36,13 @@ history, personal communications, or financial information.
 
 Amazon authentication and device-registration information is stored only in
 Chrome's local extension storage so that the user can remain signed in. It is
-used only to register the compatible Appstore profile and request a Minecraft
-APK that Amazon authorizes for that account.
+used only to register the compatible Appstore profile and request an APK that
+Amazon authorizes for that account.
 
-The extension checks only the known Minecraft listing at
-https://www.amazon.com/dp/B00992CF6W when the user clicks Download APK. It does
-not monitor or retain the user's general browsing history.
+The extension reads Appstore details only from the Amazon product page on which
+the user invokes Download APK. The Options-page Minecraft button checks the
+known Minecraft listing at https://www.amazon.com/dp/B00992CF6W. The extension
+does not monitor or retain the user's general browsing history.
 
 The Current Download Debug Log is created in memory on the Options page, resets
 at the start of each Download APK attempt, and is not automatically sent or
@@ -67,7 +69,7 @@ clear it through Chrome's extension storage controls.
 ## Limited use
 
 Information handled by the extension is limited to providing its clearly
-disclosed, user-facing Minecraft download function. It is not used or
+disclosed, user-facing Amazon Appstore APK download function. It is not used or
 transferred for unrelated purposes, personalized advertising, or human review,
 except when a user voluntarily submits a sanitized debug log for support.
 
