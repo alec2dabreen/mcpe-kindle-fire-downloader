@@ -5,6 +5,8 @@ Version 1.0
 This browser extension downloads the Kindle Fire edition of Minecraft from the Amazon
 Appstore account that owns it.
 
+It may also work with other APKs. If you visit the app's page on Amazon, there will be a "Download APK" button at the top of the page. Some work, some don't. The only one I'm really concerned with is Minecraft.
+
 ## Ownership requirement
 
 The Amazon account used to log in to this extension **must have already purchased
